@@ -1,7 +1,8 @@
-import type { Metadata } from 'next'
+import  { Metadata } from 'next'
 import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "@/styles/globals.css";
 import type { FC, ReactNode } from "react";
+import Script from 'next/script';
 
 
 const spaceGrotesk = Space_Grotesk({
@@ -26,6 +27,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
       >
         {children}
       </body>
+      <Script defer src="https://cloud.umami.is/script.js" data-website-id="548b2c8e-8439-46d5-8563-ff7d142e025d" />
     </html>
   );
 }
